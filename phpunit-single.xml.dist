@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- PHPUnit on a single site (no multisite): the tests in tests/phpunit/single. On GitHub: ci.yml. Locally:
+     WP_TESTS_DIR=<test library> phpunit -c phpunit-single.xml.dist -->
+<phpunit
+	bootstrap="tests/phpunit/bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertDeprecationsToExceptions="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+>
+	<php>
+		<ini name="error_reporting" value="-1"/>
+	</php>
+	<testsuites>
+		<testsuite name="windrose-knotboard-single">
+			<directory suffix="Test.php">tests/phpunit/single</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>

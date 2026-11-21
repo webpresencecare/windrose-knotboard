@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "windrose/pattern-preview",
+	"title": "Pattern Preview",
+	"category": "theme",
+	"description": "A library pattern drawn in the visitor's chosen style: a thumbnail in a Query Loop, or large on a pattern's page.",
+	"keywords": [
+		"pattern",
+		"preview",
+		"thumbnail"
+	],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"attributes": {
+		"size": {
+			"type": "string",
+			"enum": [
+				"thumb",
+				"full"
+			],
+			"default": "thumb"
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"textdomain": "windrose-knotboard",
+	"editorScript": "windrose-knotboard-blocks",
+	"viewScript": "windrose-knotboard-view",
+	"style": "windrose-knotboard-view"
+}

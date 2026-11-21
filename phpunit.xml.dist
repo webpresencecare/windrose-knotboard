@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- PHPUnit in multisite mode. Locally: WP_TESTS_DIR=<test library> phpunit (bin/install-wp-tests.sh installs one). On GitHub: ci.yml. -->
+<phpunit
+	bootstrap="tests/phpunit/bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertDeprecationsToExceptions="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+>
+	<php>
+		<const name="WP_TESTS_MULTISITE" value="1"/>
+		<ini name="error_reporting" value="-1"/>
+	</php>
+	<testsuites>
+		<testsuite name="windrose-knotboard">
+			<directory suffix="Test.php">tests/phpunit</directory>
+			<exclude>tests/phpunit/single</exclude>
+		</testsuite>
+	</testsuites>
+</phpunit>

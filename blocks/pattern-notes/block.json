@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "windrose/pattern-notes",
+	"title": "Pattern Notes",
+	"category": "theme",
+	"description": "Notes on a library pattern: a translation not reviewed yet, and the credits of its photos.",
+	"keywords": [
+		"credits",
+		"translation",
+		"photo"
+	],
+	"attributes": {
+		"credits": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"supports": {
+		"html": false,
+		"typography": {
+			"fontSize": true
+		}
+	},
+	"textdomain": "windrose-knotboard",
+	"editorScript": "windrose-knotboard-blocks",
+	"viewScript": "windrose-knotboard-view",
+	"style": "windrose-knotboard-view"
+}

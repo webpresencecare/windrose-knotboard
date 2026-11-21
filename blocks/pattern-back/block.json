@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "windrose/pattern-back",
+	"title": "Pattern Library Link",
+	"category": "theme",
+	"description": "A link back to the pattern library.",
+	"keywords": [
+		"back",
+		"library"
+	],
+	"supports": {
+		"html": false
+	},
+	"textdomain": "windrose-knotboard",
+	"editorScript": "windrose-knotboard-blocks",
+	"viewScript": "windrose-knotboard-view",
+	"style": "windrose-knotboard-view"
+}

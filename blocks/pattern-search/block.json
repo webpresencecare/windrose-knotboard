@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "windrose/pattern-search",
+	"title": "Pattern Search",
+	"category": "theme",
+	"description": "A search field for the pattern library.",
+	"keywords": [
+		"search"
+	],
+	"usesContext": [
+		"windrose-knotboard/form"
+	],
+	"supports": {
+		"html": false
+	},
+	"textdomain": "windrose-knotboard",
+	"editorScript": "windrose-knotboard-blocks",
+	"viewScript": "windrose-knotboard-view",
+	"style": "windrose-knotboard-view"
+}

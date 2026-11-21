@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "windrose/pattern-filter",
+	"title": "Pattern Filter",
+	"category": "theme",
+	"description": "Filters the pattern library by kind, category, tag or language, several values at once: a button with checkboxes (in Pattern Filters), links, or a cloud. Shown with two values or more.",
+	"keywords": [
+		"filter",
+		"category",
+		"tag",
+		"language",
+		"kind"
+	],
+	"usesContext": [
+		"windrose-knotboard/form"
+	],
+	"attributes": {
+		"taxonomy": {
+			"type": "string",
+			"enum": [
+				"kind",
+				"category",
+				"tag",
+				"language"
+			],
+			"default": "kind"
+		},
+		"display": {
+			"type": "string",
+			"enum": [
+				"dropdown",
+				"links",
+				"cloud"
+			],
+			"default": "dropdown"
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"textdomain": "windrose-knotboard",
+	"editorScript": "windrose-knotboard-blocks",
+	"viewScript": "windrose-knotboard-view",
+	"style": "windrose-knotboard-view"
+}

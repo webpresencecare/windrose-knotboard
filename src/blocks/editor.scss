@@ -1,0 +1,11 @@
+// Stand-ins of Knotboard's blocks in the editor.
+.windrose-knotboard-standin {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	padding: 0.75rem;
+	border: 1px dashed currentcolor;
+	border-radius: 4px;
+	font-size: 0.875rem;
+	opacity: 0.85;
+}

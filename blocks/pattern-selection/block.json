@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "windrose/pattern-selection",
+	"title": "Pattern Selection",
+	"category": "theme",
+	"description": "The visitor's chosen patterns: order, remove, copy the header, the footer and the content, download, and a preview of them together.",
+	"keywords": [
+		"selection",
+		"copy"
+	],
+	"supports": {
+		"html": false,
+		"multiple": false,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"textdomain": "windrose-knotboard",
+	"editorScript": "windrose-knotboard-blocks",
+	"viewScript": "windrose-knotboard-view",
+	"style": "windrose-knotboard-view"
+}

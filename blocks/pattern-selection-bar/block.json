@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "windrose/pattern-selection-bar",
+	"title": "Pattern Selection Bar",
+	"category": "theme",
+	"description": "How many patterns the visitor chose, with See selection (opens in a new tab).",
+	"keywords": [
+		"selection"
+	],
+	"supports": {
+		"html": false,
+		"multiple": false
+	},
+	"textdomain": "windrose-knotboard",
+	"editorScript": "windrose-knotboard-blocks",
+	"viewScript": "windrose-knotboard-view",
+	"style": "windrose-knotboard-view"
+}

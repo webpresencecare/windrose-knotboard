@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "windrose/pattern-style",
+	"title": "Pattern Preview Style",
+	"category": "theme",
+	"description": "Lets visitors choose the style the pattern previews use (Windrose Livery's ready styles).",
+	"keywords": [
+		"style",
+		"preview"
+	],
+	"supports": {
+		"html": false
+	},
+	"textdomain": "windrose-knotboard",
+	"editorScript": "windrose-knotboard-blocks",
+	"viewScript": "windrose-knotboard-view",
+	"style": "windrose-knotboard-view"
+}

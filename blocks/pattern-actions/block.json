@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "windrose/pattern-actions",
+	"title": "Pattern Actions",
+	"category": "theme",
+	"description": "Copy pattern, Add to selection and View code for a library pattern.",
+	"keywords": [
+		"copy",
+		"selection",
+		"code"
+	],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"attributes": {
+		"copy": {
+			"type": "boolean",
+			"default": true
+		},
+		"select": {
+			"type": "boolean",
+			"default": true
+		},
+		"code": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "windrose-knotboard",
+	"editorScript": "windrose-knotboard-blocks",
+	"viewScript": "windrose-knotboard-view",
+	"style": "windrose-knotboard-view"
+}

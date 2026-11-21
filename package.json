@@ -1,0 +1,24 @@
+{
+  "name": "windrose-knotboard",
+  "version": "0.2.4",
+  "private": true,
+  "description": "Windrose Knotboard: the pattern library's blocks on the site and in the editor.",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "build": "npm run manifest && wp-scripts build view=./src/view/index.js blocks=./src/blocks/index.js --output-path=build",
+    "start": "npm run manifest && wp-scripts start view=./src/view/index.js blocks=./src/blocks/index.js --output-path=build",
+    "manifest": "wp-scripts build-blocks-manifest --input=blocks --output=blocks/blocks-manifest.php",
+    "lint:js": "wp-scripts lint-js src",
+    "test:js": "node --no-warnings --test 'tests/js/*.test.mjs'"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "37.1.0"
+  },
+  "dependencies": {
+    "@wordpress/a11y": "5.1.0",
+    "@wordpress/block-editor": "20.0.0",
+    "@wordpress/blocks": "17.1.0",
+    "@wordpress/components": "44.0.0",
+    "@wordpress/i18n": "7.1.0"
+  }
+}
