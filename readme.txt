@@ -1,5 +1,5 @@
 === Windrose Knotboard - Pattern Library ===
-Contributors: patriciabt
+Contributors: patricia70
 Tags: patterns, block themes, site editor, pattern library, multisite
 Requires at least: 7.2
 Tested up to: 7.2
@@ -29,6 +29,12 @@ Copies use the color, size and spacing names of the Ipsum theme, so they fit Ips
 
 Knotboard needs Windrose Livery 0.7 or later (it draws the previews and holds the ready styles).
 
+Windrose Knotboard is part of the Windrose Suite, a free set of plugins and themes for WordPress networks: https://www.webpresencecare.com/windrose/ . Each Windrose plugin and theme works on its own.
+
+Source code, issues and build steps: https://github.com/webpresencecare/windrose-knotboard
+
+Security: please report vulnerabilities privately through GitHub: https://github.com/webpresencecare/windrose-knotboard/security/advisories/new . Never in a public support thread.
+
 == Privacy ==
 
 Windrose Knotboard sets no cookies and contacts no other service.
@@ -52,6 +58,10 @@ No. Previews use sample text, a sample menu and sample posts, made for the previ
 = Can I call the library something else? =
 
 Yes: its address under Settings, Permalinks (Pattern library base), and its title and texts in the Site Editor (Templates, Pattern library).
+
+= Is this plugin written with AI? =
+
+Yes. I write the Windrose plugins and themes with Claude Code, Anthropic's AI coding assistant: I design each feature, test it on real sites and review every release, and every commit written with Claude says so. Independent reviews are welcome on GitHub.
 
 == Uninstall ==
 

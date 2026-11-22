@@ -1,5 +1,7 @@
 # Windrose Knotboard - Pattern Library
 
+> Part of **[the Windrose Suite](https://www.webpresencecare.com/windrose/)**: WordPress for networks of sites, private by default, multilingual if you want it, free for everyone. Each Windrose plugin and theme works on its own.
+
 A pattern library on a site, part of the Windrose Suite: visitors filter and search the site's library patterns, see them in a style of their choice, copy one, or build a selection (header, footer, content) and copy or download it for their own site. A designer who installs Knotboard offers their own patterns, written in the editor or imported as pattern library packages.
 
 Requires WordPress 7.2, PHP 8.4 and **Windrose Livery 0.7** (it draws the previews and holds the ready styles; `Requires Plugins: windrose-livery`).
@@ -75,6 +77,22 @@ Playwright `tests/e2e/library.spec.mjs` runs against a WordPress multisite with 
 **Version bump**: the `Version` header and `WINDROSE_KNOTBOARD_VERSION` in `windrose-knotboard.php`, `Stable tag` and the changelog in `readme.txt`, `version` in `package.json` (and `package-lock.json`).
 
 `common/` is Windrose Common (the update library), copied from Windrose Helm with `windrose-helm/bin/sync-common.sh`; never edit it here.
+
+## Status
+
+Updates come from this repository's GitHub releases: each download is checked against the sha256 digest GitHub publishes before it is installed. A wordpress.org version may come later, after independent reviews.
+
+## Security
+
+Please report vulnerabilities privately, never in a public issue: see [SECURITY.md](SECURITY.md).
+
+## Contributing
+
+Reviews, tests and issues are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## How this code is written
+
+I write this plugin with Claude Code (Anthropic's AI coding assistant): I design each feature, test it on real sites and review every release. Commits written with Claude say so in a `Co-Authored-By` line. Human review is especially welcome.
 
 ## License
 
