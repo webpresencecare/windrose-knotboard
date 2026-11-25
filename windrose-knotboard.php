@@ -3,7 +3,7 @@
  * Plugin Name:       Windrose Knotboard - Pattern Library
  * Plugin URI:        https://www.webpresencecare.com/plugins
  * Description:       A pattern library on your site: visitors filter and search your library patterns, see them in a style of their choice, copy one, or build a selection (header, footer, content) and copy or download it for their own site. Built from templates you can change in the Site Editor.
- * Version:           0.2.4
+ * Version:           0.2.5
  * Requires at least: 7.2
  * Requires PHP:      8.4
  * Requires Plugins:  windrose-livery
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WINDROSE_KNOTBOARD_VERSION', '0.2.4' );
+define( 'WINDROSE_KNOTBOARD_VERSION', '0.2.5' );
 define( 'WINDROSE_KNOTBOARD_FILE', __FILE__ );
 define( 'WINDROSE_KNOTBOARD_DIR', __DIR__ );
 

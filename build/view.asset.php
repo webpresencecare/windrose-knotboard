@@ -1,4 +1,4 @@
-<?php return array(
+<?php defined( 'ABSPATH' ) || exit; return array(
 	'dependencies' => array(
 		'wp-a11y',
 		'wp-i18n'

@@ -4,7 +4,7 @@ Tags: patterns, block themes, site editor, pattern library, multisite
 Requires at least: 7.2
 Tested up to: 7.2
 Requires PHP: 8.4
-Stable tag: 0.2.4
+Stable tag: 0.2.5
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,11 @@ Yes. I write the Windrose plugins and themes with Claude Code, Anthropic's AI co
 Uninstalling removes Knotboard's settings and the network switch. The library patterns stay in the database, as posts of any plugin do; reinstalling Knotboard shows them again.
 
 == Changelog ==
+
+= 0.2.5 =
+* Windrose Common 1.4.0: Files, for reading, writing and copying uploads and temporary files through WordPress's Filesystem API.
+* Import: pictures are written to their temporary file through WordPress's Filesystem API.
+* Code: the generated script files (`*.asset.php`, `blocks-manifest.php`) stop when opened directly.
 
 = 0.2.4 =
 * Windrose Common 1.3.0: updates come from the public GitHub repositories, without a token (WordPress 7.2 RC no longer has the Secrets API, where the token was kept).

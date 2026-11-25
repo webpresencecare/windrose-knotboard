@@ -23,6 +23,7 @@ namespace Windrose\Knotboard;
 use WP_Error;
 use WP_Post;
 use WP_Query;
+use Windrose\Common\Files;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -491,7 +492,7 @@ final class Import {
 			return $found[0];
 		}
 		$tmp = wp_tempnam( $ident );
-		if ( '' === $tmp || false === file_put_contents( $tmp, $image['bytes'] ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents -- a temporary file for core's media_handle_sideload().
+		if ( '' === $tmp || ! Files::write( $tmp, $image['bytes'] ) ) {
 			return new WP_Error( 'windrose_knotboard_picture', __( 'A picture could not be written to a temporary file.', 'windrose-knotboard' ) );
 		}
 		$credit = $image['credit'];
