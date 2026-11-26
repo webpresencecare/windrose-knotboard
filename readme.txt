@@ -4,7 +4,7 @@ Tags: patterns, block themes, site editor, pattern library, multisite
 Requires at least: 7.2
 Tested up to: 7.2
 Requires PHP: 8.4
-Stable tag: 0.2.5
+Stable tag: 0.2.6
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,11 @@ Yes. I write the Windrose plugins and themes with Claude Code, Anthropic's AI co
 Uninstalling removes Knotboard's settings and the network switch. The library patterns stay in the database, as posts of any plugin do; reinstalling Knotboard shows them again.
 
 == Changelog ==
+
+= 0.2.6 =
+* Deactivating Knotboard removes the pattern library's addresses from the rewrite rules on every site, and activating it again rebuilds them (before, the library could show "page not found" until the permalinks were saved).
+* Import: when an uploaded pack is deleted early, WordPress's clean-up task for it is removed too.
+* Code: pictures in patterns are found with WordPress's HTML API.
 
 = 0.2.5 =
 * Windrose Common 1.4.0: Files, for reading, writing and copying uploads and temporary files through WordPress's Filesystem API.

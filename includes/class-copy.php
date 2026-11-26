@@ -73,7 +73,7 @@ final class Copy {
 			}
 			$name = is_string( $block['blockName'] ?? null ) ? $block['blockName'] : '';
 			$html = is_string( $block['innerHTML'] ?? null ) ? $block['innerHTML'] : '';
-			if ( '' !== $name && ( str_contains( $html, '<img' ) || ! empty( $block['attrs']['url'] ) ) ) {
+			if ( '' !== $name && ( ! empty( $block['attrs']['url'] ) || ( '' !== $html && ( new \WP_HTML_Tag_Processor( $html ) )->next_tag( array( 'tag_name' => 'IMG' ) ) ) ) ) {
 				$names[] = $name;
 			}
 			if ( is_array( $block['innerBlocks'] ?? null ) ) {

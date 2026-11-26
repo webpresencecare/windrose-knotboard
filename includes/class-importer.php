@@ -314,6 +314,8 @@ final class Importer {
 		require_once ABSPATH . 'wp-admin/includes/import.php';
 		foreach ( $ids as $id ) {
 			wp_import_cleanup( (string) $id );
+			// The clean-up core scheduled for this upload has nothing left to delete.
+			wp_clear_scheduled_hook( 'importer_scheduled_cleanup', array( $id ) );
 		}
 	}
 

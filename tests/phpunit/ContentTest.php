@@ -8,6 +8,7 @@
 
 use Windrose\Knotboard\Content;
 use Windrose\Knotboard\Network;
+use Windrose\Knotboard\Plugin;
 
 /**
  * @covers \Windrose\Knotboard\Content
@@ -40,6 +41,25 @@ class ContentTest extends Knotboard_TestCase {
 		$id = $this->pattern( 'Hero' );
 		$this->assertSame( Content::TYPE, get_post_type( $id ) );
 		$this->assertSame( array(), get_posts( array( 'post_type' => 'wp_block' ) ) );
+	}
+
+	public function test_deactivation_removes_the_addresses_and_the_version_mark_on_every_site(): void {
+		$sites = array( get_current_blog_id(), self::factory()->blog->create() );
+		foreach ( $sites as $site ) {
+			switch_to_blog( $site );
+			update_option( 'windrose_knotboard_version', WINDROSE_KNOTBOARD_VERSION );
+			update_option( 'rewrite_rules', array( '^patterns/selection/?$' => 'index.php' ) );
+			restore_current_blog();
+		}
+		Plugin::deactivate( true );
+		foreach ( $sites as $site ) {
+			$this->assertFalse( get_blog_option( $site, 'windrose_knotboard_version' ), "Version mark on site $site." );
+			$this->assertFalse( get_blog_option( $site, 'rewrite_rules' ), "Stored addresses on site $site." );
+		}
+		// Activating again rebuilds the addresses once.
+		Content::upgrade();
+		$this->assertSame( WINDROSE_KNOTBOARD_VERSION, get_option( 'windrose_knotboard_version' ) );
+		wp_delete_site( $sites[1] );
 	}
 
 	public function test_exactly_one_kind(): void {

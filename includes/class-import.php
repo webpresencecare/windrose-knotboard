@@ -334,7 +334,7 @@ final class Import {
 
 	/**
 	 * Whether the site's content filter (`wp_kses_post()`, block attributes included) leaves the markup as it is.
-	 * KSES may write tags differently (attribute order, `<img>` without its slash): the HTML is compared token by
+	 * KSES may write tags differently (attribute order, a void tag without its closing slash): the HTML is compared token by
 	 * token (tags with their attributes, text, block comments), not character by character.
 	 *
 	 * @param string $content Block markup.

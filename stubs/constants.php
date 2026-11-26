@@ -5,7 +5,7 @@
  * @package Windrose\Knotboard
  */
 
-define( 'WINDROSE_KNOTBOARD_VERSION', '0.2.5' );
+define( 'WINDROSE_KNOTBOARD_VERSION', '0.2.6' );
 define( 'WINDROSE_KNOTBOARD_FILE', __DIR__ . '/../windrose-knotboard.php' );
 define( 'WINDROSE_KNOTBOARD_DIR', dirname( __DIR__ ) );
 define( 'WINDROSE_COMMON_VERSION', '1.4.0' );

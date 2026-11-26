@@ -1,6 +1,6 @@
 {
   "name": "windrose-knotboard",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "private": true,
   "description": "Windrose Knotboard: the pattern library's blocks on the site and in the editor.",
   "license": "GPL-2.0-or-later",

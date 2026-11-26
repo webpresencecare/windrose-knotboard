@@ -39,6 +39,34 @@ final class Plugin {
 	}
 
 	/**
+	 * On deactivation, on every site (or this one on a single site): the library's addresses go from the rewrite rules
+	 * (WordPress rebuilds them on the next request, without Knotboard's), and the version mark goes, so activating
+	 * again rebuilds the addresses (Content::upgrade()). Deleting the stored rules, not flushing them: the post type is
+	 * still registered during deactivation, and a flush would write its rules back.
+	 *
+	 * @param bool $network_wide Whether the plugin is deactivated for the whole network.
+	 * @return void
+	 */
+	public static function deactivate( bool $network_wide = false ): void {
+		$sites = is_multisite() && $network_wide ? get_sites(
+			array(
+				'fields' => 'ids',
+				'number' => 0,
+			)
+		) : array( get_current_blog_id() );
+		foreach ( $sites as $site ) {
+			if ( is_multisite() ) {
+				switch_to_blog( (int) $site );
+			}
+			delete_option( 'rewrite_rules' );
+			delete_option( 'windrose_knotboard_version' );
+			if ( is_multisite() ) {
+				restore_current_blog();
+			}
+		}
+	}
+
+	/**
 	 * Whether Windrose Livery (which draws the previews) is there.
 	 *
 	 * @return bool
